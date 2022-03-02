@@ -1,20 +1,96 @@
 {
 	"title": "NHL Team Alphabetical",
-	"NHL":[
+	"teams":[
 
     {
     "Team":"Bruins",
+    "GamesPlayed":"53",
     "Loses":"31",
     "Wins":"17",
+    "OverTimeLoss":"4",
     "StanleyCupWins":6,
     "Image":"bruins.png"
     },
     {
     "Team":"Flames",
+    "GamesPlayed":"51",
     "Loses":"31",
     "Wins":"14",
+    "OverTimeLoss":"6",
     "StanleyCupWins":1,
     "Image":"flames.png"
+    },
+    {
+    "Team":"Golden Knights",
+    "GamesPlayed":"53",
+    "Loses":"29",
+    "Wins":"20",
+    "OverTimeLoss":"4",
+    "StanleyCupWins":0,
+    "Image":"golden-knights.png"
+    },
+    {
+    "Team":"Kraken",
+    "GamesPlayed":"54",
+    "Loses":"16",
+    "Wins":"33",
+    "OverTimeLoss":"5",
+    "StanleyCupWins":0,
+    "Image":"kraken.png"
+    },
+   {
+    "Team":"Lightning",
+    "GamesPlayed":"51",
+    "Loses":"34",
+    "Wins":"11",
+    "OverTimeLoss":"6",
+    "StanleyCupWins":74,
+    "Image":"lightning.png"
+    },
+    {
+    "Team":"Maple Leafs",
+    "GamesPlayed":"52",
+    "Loses":"34",
+    "Wins":"14",
+    "OverTimeLoss":"4",
+    "StanleyCupWins":3,
+    "Image":"maple-leafs.png"
+    },
+    {
+    "Team":"Panthers",
+    "GamesPlayed":"53",
+    "Loses":"35",
+    "Wins":"13",
+    "OverTimeLoss":"5",
+    "StanleyCupWins":0,
+    "Image":"panthers.png"
+    },
+    {
+    "Team":"Red Wings",
+    "GamesPlayed":"53",
+    "Loses":"23",
+    "Wins":"24",
+    "OverTimeLoss":"6",
+    "StanleyCupWins":11,
+    "Image":"red-wings.png"
+    },
+    {
+    "Team":"Sabres",
+    "GamesPlayed":"54",
+    "Loses":"16",
+    "Wins":"30",
+    "OverTimeLoss":"8",
+    "StanleyCupWins":0,
+    "Image":"sabres.png"
+    },
+    {
+    "Team":"Senators",
+    "GamesPlayed":"51",
+    "Loses":"19",
+    "Wins":"27",
+    "OverTimeLoss":"5",
+    "StanleyCupWins":0,
+    "Image":"senators.png"
     }
   ]
 }

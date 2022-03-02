@@ -28,8 +28,8 @@ if(isset($_REQUEST['cat']))
 {//check to be sure data has been transmitted via GET or POST
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
-		case "num":
-			include('data/num.js'); //"num" orders by championship results
+		case "wins":
+			include('data/wins.js'); //"num" orders by championship results
 			break;
 		default:
 			include('data/alpha.js'); //default orders by teams

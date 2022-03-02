@@ -25,12 +25,14 @@ body {font-family:georgia;}
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-function hockeyTemplate(NHLs){
+function hockeyTemplate(team){
    return `<div class="hockey">
       <b>Team: </b> ${team.Team}<br />
+      <b>GamesPlayed: </b> ${team.GamesPlayed}<br />
       <b>Loses: </b> ${team.Loses}<br />
       <b>Wins: </b> ${team.Wins}<br />
-      <b>StanleyCupWins: </b> ${team.StanleyCupWins}<br />
+      <b>OverTimeLoss: </b> ${team.OverTimeLoss}<br />
+      <b>Stanley Cup Wins: </b> ${team.StanleyCupWins}<br />
       <div class="pic"><img src="thumbnails/${team.Image}" /></div>
     </div>`;
 }
@@ -75,7 +77,7 @@ $(document).ready(function() {
 	<body>
 	<h1>Bond Web Service</h1>
 		<a href="alpha" class="category">NHL Teams</a><br />
-		<a href="num" class="category">NHL Stanley Cup Wins</a>
+		<a href="wins" class="category">NHL Stanley Cup Wins</a>
 		<h3 id="hockeytitle">Title Will Go Here</h3>
 		<div id="hockeys">
 			<p>League will go here</p>
