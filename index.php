@@ -3,7 +3,6 @@
 <title>Bond Web Service Demo</title>
 <style>
 body {font-family:georgia;}
-
   .hockey{
     border:1px solid #E77DC2;
     border-radius: 5px;
@@ -18,30 +17,27 @@ body {font-family:georgia;}
     top:10px;
   }
 
+  .pic img{
+	max-width:100px;
+  }
+
 </style>
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-
-function hockeyTemplate(team){
+function hockeyTemplate(NHLs){
    return `<div class="hockey">
       <b>Team: </b> ${team.Team}<br />
-      <b>GamesPlayed: </b> ${team.GamesPlayed}<br />
       <b>Loses: </b> ${team.Loses}<br />
       <b>Wins: </b> ${team.Wins}<br />
-      <b>OverTimeLoss: </b> ${team.OverTimeLoss}<br />
-      <b>Points: </b> ${team.Points}<br />
-      <b>Streaks: </b> ${team.Streaks}<br />
+      <b>StanleyCupWins: </b> ${team.StanleyCupWins}<br />
       <div class="pic"><img src="thumbnails/${team.Image}" /></div>
     </div>`;
 }
-
 $(document).ready(function() {  
-
 	$('.category').click(function(e){
     e.preventDefault(); //stop default action of the link
 		cat = $(this).attr("href");  //get category from URL
-
     var request = $.ajax({
       url: "api.php?cat=" + cat,
       method: "GET",
@@ -49,25 +45,21 @@ $(document).ready(function() {
     });
     request.done(function( data ) {
       console.log(data);
-      // $("#hockeytitle").html(data.title);
-
+      $("#hockeytitle").html(data.title);
       //clears the previous films
       $("#hockeys").html("");
       //loops through films 
       $.each(data.teams,function(key,value){
       let str = hockeyTemplate(value);
-
       $("<div></div>").html(str).appendTo("#hockeys");
         
       });
-
       //Place the title of the web service on the page
       //$("#output").text(JSON.stringify(data));
       
-      let myData = JSON.stringify(data,null,4);
-
-      myData = "<pre>" + myData + "</pre>";
-      $("#output").html(myData);
+      // let myData = JSON.stringify(data,null,4);
+      // myData = "<pre>" + myData + "</pre>";
+      // $("#output").html(myData);
       
       
     });
@@ -78,18 +70,16 @@ $(document).ready(function() {
     });
 	});
 });	
-
 </script>
 </head>
 	<body>
 	<h1>Bond Web Service</h1>
-		<a href="alpha" class="category">National Hockey League</a><br />
-		<!-- <a href="box" class="category">Bond Films By International Box Office Totals</a> -->
+		<a href="alpha" class="category">NHL Teams</a><br />
+		<a href="num" class="category">NHL Stanley Cup Wins</a>
 		<h3 id="hockeytitle">Title Will Go Here</h3>
 		<div id="hockeys">
 			<p>League will go here</p>
 		</div>
-
 		<div id="output">Results go here</div>
 	</body>
 </html>

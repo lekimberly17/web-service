@@ -28,11 +28,11 @@ if(isset($_REQUEST['cat']))
 {//check to be sure data has been transmitted via GET or POST
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
-		case "box":
-			include('data/bond-box-office.js'); //"box" orders by box office results
+		case "num":
+			include('data/num.js'); //"num" orders by championship results
 			break;
 		default:
-			include('data/hockey-teams-alphabetical.js'); //default orders by year
+			include('data/alpha.js'); //default orders by teams
 	}
 }else{//if not data sent, inform calling application
 	echo "Incorrect parameter sent";
